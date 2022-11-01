@@ -3,10 +3,23 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
+  - name: Restore .env file
+    command: |
+      if [ -f .env ]; then
+        echo "Found .env in workspace"
+      else
+        if [ -z "${DOTENV}" ]; then
+          echo "Setting example .env"
+          cp .env.example .env
+        else
+          echo "Restoring .env from Gitpod"
+          echo "${DOTENV}" | base64 -d > .env
+        fi
+      fi
   - init: pnpm add -g pnpm && pnpm install && pnpm run build
-    command: pnpm run start:dev
+    command: pnpm dev
 ports:
   - name: Web App
     description: The main application web server
     port: 3000
-    onOpen: open-browser
+    onOpen: notify
