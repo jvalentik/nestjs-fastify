@@ -80,6 +80,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.ts'],
     mainFields: ['main'],
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     plugins: [new TsconfigPathsPlugin({ configFile: tsConfigFile })],
   },
   target: 'node',
