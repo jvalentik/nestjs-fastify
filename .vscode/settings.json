@@ -5,5 +5,18 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/*.crswap": true,
+    "**/.angular": true,
+    "**/.idea": true,
+    "**/.vscode": true,
+    "**/node_modules": true
+  }
 }
