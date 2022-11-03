@@ -18,5 +18,10 @@
     "**/.idea": true,
     "**/.vscode": true,
     "**/node_modules": true
-  }
+  },
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredHighContrastColorTheme": "GitHub Dark High Contrast",
+  "workbench.preferredHighContrastLightColorTheme": "Solarized Light",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.iconTheme": "material-icon-theme"
 }
